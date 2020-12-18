@@ -1,0 +1,14 @@
+{
+    "employee": [
+        {
+            "name":"Utkarsh",
+            "profilePic":"pic1",
+            "gender":"Male",
+            "salary":65000,
+            "departments":["finance"],
+            "startDate":"2020-12-10",
+            "notes":"HI"
+        }
+    ]
+
+}    
