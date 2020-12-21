@@ -21,7 +21,7 @@ const PayrollForm = (props) => {
         ],
         departMentValue: [],
         gender: '',
-        salary: '',
+        salary: '400000',
         day: '1',
         month: 'Jan',
         year: '2020',
@@ -73,11 +73,12 @@ const PayrollForm = (props) => {
         setForm({
           ...formValue,
           ...obj,
-          departMentValue: obj.departMent,
+          departMentValue: obj.departments,
           isUpdate: true,
           day: array[0],
           month: array[1],
           year: array[2],
+          profileUrl: obj.profilePic
         });
       };
 
