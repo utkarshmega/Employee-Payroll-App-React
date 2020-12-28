@@ -1,56 +1,16 @@
 {
   "employee": [
     {
-      "name": "Lisa Berhmen",
+      "name": "Utkarsh Agrawal",
       "departments": [
-        "HR",
-        "Sales"
-      ],
-      "gender": "female",
-      "salary": "432123",
-      "startDate": "12 June 2020",
-      "notes": "first test entry!\n",
-      "id": "124",
-      "profileUrl": "../../assets/profile-images/Ellipse -1.png"
-    },
-    {
-      "name": "Utkarsh",
-      "departments": [
-        "Engineer",
         "Sales"
       ],
       "gender": "male",
-      "salary": "457500",
-      "startDate": "15 Aug 2018",
-      "notes": "Hello Uttu",
-      "profilePic": "../../assets/profile-images/Ellipse -8.png",
-      "id": "zPmIpia"
-    },
-    {
-      "name": "Akash",
-      "departments": [
-        "HR",
-        "Finance"
-      ],
-      "gender": "male",
-      "salary": "423900",
-      "startDate": "1 April 2020",
-      "notes": "hi akash",
+      "salary": "388000",
+      "startDate": "17 Aug 2020",
+      "notes": "Hii utkarsh",
       "profilePic": "../../assets/profile-images/Ellipse -3.png",
-      "id": "tF_C3Zt"
-    },
-    {
-      "name": "Dhanshree",
-      "departments": [
-        "Sales",
-        "Finance"
-      ],
-      "gender": "female",
-      "salary": "381400",
-      "startDate": "17 Sept 2017",
-      "notes": "hii DHanshree",
-      "profilePic": "../../assets/profile-images/Ellipse -7.png",
-      "id": "7_n3GGx"
+      "id": 1
     }
   ]
 }

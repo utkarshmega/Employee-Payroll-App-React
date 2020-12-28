@@ -11,6 +11,17 @@ import EmployeeService from "../../services/employee-payroll-service";
 
 const Display = (props) => {
   const employeeService = new EmployeeService();
+  const remove = (element) => {
+      employeeService.deleteEmployee(element.id).then(data => console.log('Success'))
+                    .catch(err => console.log('Error'));
+      window.location.reload();
+  }
+
+  const edit = (element) => {
+      props.history.push(`/payroll-form/${element.id}`);
+    
+   }
+
   return (
     <table id="display" className="display">
       <tbody>
@@ -53,11 +64,11 @@ const Display = (props) => {
               <td> ₹ {element.salary}</td>
               <td>{element.startDate}</td>
               <td>
-                <img
+                <img onClick = {() => remove(element)}
                   src={deleteIcon}
                   alt="delete"
                 />
-                <img
+                <img onClick = {() => edit(element)}
                   src={editIcon}
                   alt="edit"
                 />

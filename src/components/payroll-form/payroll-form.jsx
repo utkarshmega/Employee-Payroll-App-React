@@ -21,7 +21,7 @@ const PayrollForm = (props) => {
         ],
         departMentValue: [],
         gender: '',
-        salary: '',
+        salary: '400000',
         day: '1',
         month: 'Jan',
         year: '2020',
@@ -45,13 +45,7 @@ const PayrollForm = (props) => {
 
     const params = useParams();
 
-    useEffect(() => {
-        if (params.id) {
-          getDataById(params.id);
-        }
-      }, []);
-
-      const getDataById = (id) => {
+    const getDataById = (id) => {
         employeeService
           .getEmployee(id)
           .then((data) => {
@@ -64,8 +58,14 @@ const PayrollForm = (props) => {
           });
       };
 
-    let _ = require('lodash');
-    formValue.id = _.uniqueId();
+    useEffect(() => {
+        if (params.id) {
+          getDataById(params.id);
+        }
+      }, []);
+
+    // let _ = require('lodash');
+    // formValue.id = _.uniqueId();
 
 
     const setData = (obj) => {
@@ -73,11 +73,12 @@ const PayrollForm = (props) => {
         setForm({
           ...formValue,
           ...obj,
-          departMentValue: obj.departMent,
+          departMentValue: obj.departments,
           isUpdate: true,
           day: array[0],
           month: array[1],
           year: array[2],
+          profileUrl: obj.profilePic
         });
       };
 
@@ -160,15 +161,28 @@ const PayrollForm = (props) => {
               };
               console.log("id"+formValue.id);
               console.log(object);
-              employeeService.addEmployee(object)
+              if(formValue.isUpdate) {
+                employeeService.updateEmployee(formValue.id, object)
                 .then((data) => {
-                  alert("data added successfully");
+                  alert("data updated successfully");
                   props.history.push("");
                   window.location.reload();
                 })
                 .catch((err) => {
                   alert("error while Adding data");
                 });
+              }
+              else {
+                employeeService.addEmployee(object)
+                    .then((data) => {
+                    alert("data added successfully");
+                    props.history.push("");
+                    window.location.reload();
+                    })
+                    .catch((err) => {
+                    alert("error while Adding data");
+                    });
+                }
             }
      };
     const reset = () => {
