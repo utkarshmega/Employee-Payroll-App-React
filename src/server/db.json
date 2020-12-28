@@ -1,44 +1,16 @@
 {
   "employee": [
     {
-      "name": "Akash",
+      "name": "Utkarsh Agrawal",
       "departments": [
-        "HR",
-        "Finance"
-      ],
-      "gender": "male",
-      "salary": "423900",
-      "startDate": "1 April 2020",
-      "notes": "hi akash",
-      "profilePic": "../../assets/profile-images/Ellipse -3.png",
-      "id": "tF_C3Zt"
-    },
-    {
-      "name": "Hello World",
-      "departments": [
-        "Sales",
-        "Finance",
-        "Engineer"
-      ],
-      "gender": "male",
-      "salary": "451300",
-      "startDate": "15 Sept 2018",
-      "notes": "Hello world",
-      "profilePic": "../../assets/profile-images/Ellipse -3.png",
-      "id": "rAIIfH5"
-    },
-    {
-      "name": "James Bond",
-      "departments": [
-        "HR",
         "Sales"
       ],
       "gender": "male",
-      "salary": "400000",
-      "startDate": "16 Sept 2017",
-      "notes": "Hello james",
+      "salary": "388000",
+      "startDate": "17 Aug 2020",
+      "notes": "Hii utkarsh",
       "profilePic": "../../assets/profile-images/Ellipse -3.png",
-      "id": "H0htQCB"
+      "id": 1
     }
   ]
 }

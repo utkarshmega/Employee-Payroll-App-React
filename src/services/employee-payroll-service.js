@@ -25,5 +25,4 @@ export default class EmployeeService {
     return AxiosService.putService(`${this.baseUrl}/employee/${id}`,data);
   }
 
-
 }
